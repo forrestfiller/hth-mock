@@ -8,6 +8,7 @@ Done
 6. createlab page to make a basic project
 7. individual labs on index page redirect to lab page (url shows mongo _id
 but not rendering data into the page yet) 
+8. added the '&format=json' to end of route to allow me to see json as needed
 
 To-Dos:
  - deploy to heroku so GC can look
