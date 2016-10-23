@@ -1,0 +1,17 @@
+Done
+1. wire up index page - render text for confirmation
+2. wire up a labs page - render text for confirmation
+3. wire up a toolbox page - render text for confirmation
+4. add in a serach bar and button
+5. partial integration of mongo + mongoose
+To-Do:
+1. attach the search to database...so its time to add in mongo
+2. Set up mongoDB
+2. add sign-in/register inputs on the labs page, and also on the nav bar.
+
+
+GC:
+I want them to see those 2 options, where the Toolbox allow immediate access to the content, while the Labs link opens a sign up/ sign in page as you need to be registered
+--or the classic upper corner in the main pages
+
+**no frames around the individual tools in the toolbox**
