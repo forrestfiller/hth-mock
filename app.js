@@ -9,7 +9,7 @@ var mongoose = require('mongoose')
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
-var dbUrl = 'mongodb://localhost/hth-mock'
+var dbUrl = process.env.MONGODB_URI || 'mongodb://localhost/hth-mock'
 mongoose.connect(dbUrl, function(err, res){  
   if (err){
     console.log('DB CONNECTION FAILED: '+err)
