@@ -4,7 +4,7 @@ var LabSchema = new mongoose.Schema({
   title: {type:String, defaul:''},
   text: {type:String, default:''},
   type: {type:String, default:''},
-  timestamp: {type:Data, default:Date.now}
+  timestamp: {type:Date, default:Date.now}
 })
 
 module.exports = mongoose.model('LabSchema', LabSchema)
