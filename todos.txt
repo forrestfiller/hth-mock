@@ -9,15 +9,20 @@ Done
 7. individual labs on index page redirect to lab page (url shows mongo _id
 but not rendering data into the page yet) 
 8. added the '&format=json' to end of route to allow me to see json as needed
+9. deloyed it to heroku: https://hthmock.herokuapp.com/
+  in its current state:
+  a. the homepage lists the current "labs" (fake labs).
+  b. you can click on the lab and it goes to its own lab page. You can add '&formet=json' at the end of the url to see the raw json showing the keys and value pair.
+  c. to create a new lab you have to actually go to: https://hthmock.herokuapp.com/createlab , and input the information and click submit which sends to the mongoDB. This is not protected yet (see below todos).
+
 
 To-Dos:
- - deploy to heroku so GC can look
-1. Get title, text, and type to render onto lab page by mongo _id
-2. Toolbox: hook up to mongoDB
-3. Toolbox: search functionality of projects from toolbox
-4. Toolbox: when you click on a tool, redirect to specific tool page
 
-5. Add in theme
+1. Toolbox search: hook up to mongoDB (new schema--Tool.js? Or just new key:value pair in current Lab.js schema ie 'toolbox' and 'labs' to seperate them when searching.
+2. Toolbox: search functionality of projects from toolbox
+3. Toolbox: when you click on a tool, redirect to specific tool page
+
+5. Add in front-end theme
 6. Pare down theme
 7. Add in partials
 
