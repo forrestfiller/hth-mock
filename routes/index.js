@@ -22,23 +22,32 @@ router.get('/', function(req, res, next) {
 
 router.get('/:page', function(req, res, next) {
 	var page = req.params.page
+	var id = req.query.id
+	var format = req.query.format
+	if (format == null)
+		format = 'html'
 
 	if (pages.indexOf(page) == -1){ //page not found show error
-		res.render('error', {message:'Page not found'})
+		res.render('error', { message:'Page not found' })
 		return
 	}
-	if (page == 'lab'){
+	if (page != 'lab'){
 		res.render(page, null)	
 		return
 	}
 
-	var id = req.query.id
 	Lab.findById(id, function(err, lab){
 		if (err){
 			res.render('error', { message: 'Page not found findById' })
 			return
 		}
-		res.render(page, lab)
+		if (format == 'json'){
+			res.json(lab)
+		}
+		else {
+		res.render(page, lab)			
+		}
+
 	})
 	
 })
