@@ -1,9 +1,9 @@
 var mongoose = require('mongoose')
 
-var ToolSchema = new mongoose.Schema({
+var LabSchema = new mongoose.Schema({
   title: {type:String, defaul:''},
   text: {type:String, default:''},
   type: {type:String, default:''}
 })
 
-module.exports = mongoose.model('ToolSchema', ToolSchema)
+module.exports = mongoose.model('LabSchema', LabSchema)

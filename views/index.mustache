@@ -4,7 +4,16 @@
     <title>HOME PAGE</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
-    <h3>HOME PAGE</h3>
+  <body style="background:#f9f9f9">
+    <h3 style="margin-left:16px">HOME PAGE</h3>
+
+   	<h3 style="margin-left:16px;padding-bottom:16px">Labs</h3>
+    {{#current}}
+    	<div style="background:#fff;margin-bottom:8px;margin-left:16px;padding:16px">
+	    	<h2>
+	    		<a href="/lab?id={{ _id }}">{{ title }}</a>
+	    	</h2> 		
+    	</div>
+   	{{/current}}
   </body>
 </html>
