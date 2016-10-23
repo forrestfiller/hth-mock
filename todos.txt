@@ -1,17 +1,31 @@
 Done
-1. wire up index page - render text for confirmation
-2. wire up a labs page - render text for confirmation
+
+1. wire up index page - renders a list of labs
+2. wire up a lab page - render text for confirmation
 3. wire up a toolbox page - render text for confirmation
-4. add in a serach bar and button
-5. partial integration of mongo + mongoose
-To-Do:
-1. attach the search to database...so its time to add in mongo
-2. Set up mongoDB
-2. add sign-in/register inputs on the labs page, and also on the nav bar.
+    - add in a serach bar and button (not functional yet)
+5. lab schema in models dir; integration of mongo + mongoose
+6. createlab page to make a basic project
+7. individual labs on index page redirect to lab page (url shows mongo _id
+but not rendering data into the page yet) 
+
+To-Dos:
+ - deploy to heroku so GC can look
+1. Get title, text, and type to render onto lab page by mongo _id
+2. Toolbox: hook up to mongoDB
+3. Toolbox: search functionality of projects from toolbox
+4. Toolbox: when you click on a tool, redirect to specific tool page
+
+5. Add in theme
+6. Pare down theme
+7. Add in partials
+
+8. add login/register 
 
 
 GC:
-I want them to see those 2 options, where the Toolbox allow immediate access to the content, while the Labs link opens a sign up/ sign in page as you need to be registered
---or the classic upper corner in the main pages
+I want them to see those 2 options, where the Toolbox allow immediate access
+to the content, while the Labs link opens a sign up/ sign in page as you need
+to be registered to create a lab.
 
-**no frames around the individual tools in the toolbox**
+
