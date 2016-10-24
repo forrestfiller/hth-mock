@@ -45,7 +45,7 @@ router.get('/:page', function(req, res, next) {
 			res.json(entry)
 		}
 		else {
-		res.render(page, entry)			
+			res.render(page, entry)			
 		}
 
 	})
