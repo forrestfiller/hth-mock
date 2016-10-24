@@ -7,7 +7,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose')
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var api = require('./routes/api')
+
 
 var dbUrl = process.env.MONGODB_URI || 'mongodb://localhost/hth-mock'
 mongoose.connect(dbUrl, function(err, res){  
@@ -35,7 +36,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/api', api)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

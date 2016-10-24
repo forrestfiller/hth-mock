@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Entry</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+
+  <div>
+    <body>
+      <div style="margin-right:516px;padding:8px;background:#f9f9f9;text-decoration:Arial">
+        <h3>Create An Entry</h3> 
+        <p>Enter tool information below.</p>
+        <div>    
+          <form action="/createentry" method="post">
+            <input name ="title" type="text" placeholder="Project Title" /><br />
+            <input name ="text" type="text" placeholder="Project Description" /><br />
+            <input name ="type" type="text" placeholder="Project Type" /><br />
+            <input type="submit" value="Submit" />
+          </form>          
+        </div>  
+      
+      </div>
+
+    </body>
+  </div>
+
+</html>

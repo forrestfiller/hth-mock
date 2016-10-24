@@ -1,19 +1,19 @@
 var express = require('express')
 var router = express.Router()
-var Lab = require('../models/Lab')
+var Entry = require('../models/Entry')
 
-var pages = ['index', 'toolbox', 'createlab', 'lab']
+var pages = ['index', 'error', 'createentry', 'entry' ]
 
 router.get('/', function(req, res, next) {
 
-	Lab.find(null, function(err, labs){
+	Entry.find(null, function(err, entries){
 		if (err){
 			res.render('error', err)
 			return
 		}
 
 		var data = {
-			current: labs
+			current: entries
 		}
 
   		res.render('index', data)
@@ -27,25 +27,25 @@ router.get('/:page', function(req, res, next) {
 	if (format == null)
 		format = 'html'
 
-	if (pages.indexOf(page) == -1){ //page not found show error
+	if (pages.indexOf(page) == -1){
 		res.render('error', { message:'Page not found' })
 		return
 	}
-	if (page != 'lab'){
+	if (page != 'entry'){
 		res.render(page, null)	
 		return
 	}
 
-	Lab.findById(id, function(err, lab){
+	Entry.findById(id, function(err, entry){
 		if (err){
 			res.render('error', { message: 'Page not found findById' })
 			return
 		}
 		if (format == 'json'){
-			res.json(lab)
+			res.json(entry)
 		}
 		else {
-		res.render(page, lab)			
+		res.render(page, entry)			
 		}
 
 	})
@@ -61,7 +61,7 @@ router.post('/:page', function(req, res, next) {
 	var params = req.body
 	var type = params.type
 
-	Lab.create(params, function(err, lab){
+	Entry.create(params, function(err, entry){
 		if (err) {
 			res.render('error', err)
 			return
@@ -69,15 +69,7 @@ router.post('/:page', function(req, res, next) {
 		res.redirect('/')
 	})
 
-
-
 })
-
-
-
-
-
-
 
 
 
