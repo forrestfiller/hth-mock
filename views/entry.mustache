@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title>Entry | {{title}}</title>
+    <title>Entry | {{ title }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
+
   <body style="background:#f9f9f9">
-    <h3 style="margin-left:16px">LAB PAGE</h3>
-    	<div style="background:#fff;margin-left:16px;padding:8px 8px 8px 0px">
-	    	Name of Project:{{ title }}
-	    	Project Description:{{ text }}
-	    	Project Category:{{ type }}    		
-    	</div>
+
+    <h3 style="margin-left:16px">Entry Page</h3>
+    	
+    <div style="background:#fff;margin-left:16px;padding:8px 8px 8px 0px">
+    	<h4 style="margin-bottom: 0px">Name of Project:</h4><p style="margin-top: 0px;margin-bottom: 0px">{{ title }}</p>
+
+    	<h4 style="margin-bottom: 0px;margin-top: 8px">Project Description:</h4><p style="margin-top: 0px;margin-bottom: 0px">{{ text }}</p>
+
+      <h4 style="margin-bottom: 0px;margin-top: 8px">Project Category:</h4><p style="margin-top: 0px;margin-bottom: 0px">{{ type }}</p>
+
+      <h4 style="margin-bottom: 0px;margin-top: 8px">Entry approved for use:</h4><p style="margin-top: 0px">{{ approved }}</p>
+
+  	</div>
+
   </body>
+
 </html>

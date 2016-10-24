@@ -6,20 +6,34 @@
     </head>
 
   <div>
+
     <body>
+
+
       <div style="margin-right:516px;padding:8px;background:#f9f9f9;text-decoration:Arial">
+
+
         <h3>Create An Entry</h3> 
-        <p>Enter tool information below.</p>
+        <p>Enter tool information:</p>
+
         <div>    
+
           <form action="/createentry" method="post">
             <input name ="title" type="text" placeholder="Project Title" /><br />
             <input name ="text" type="text" placeholder="Project Description" /><br />
             <input name ="type" type="text" placeholder="Project Type" /><br />
+            <p>If approved, it's a tool: "true". If tool under development, it's a lab: "false"</p>
+            <input name ="approved" type="text" placeholder="True or False" /><br />
             <input type="submit" value="Submit" />
+
           </form>          
+
         </div>  
       
       </div>
+
+
+
 
     </body>
   </div>

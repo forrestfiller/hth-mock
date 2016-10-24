@@ -4,7 +4,7 @@ var EntrySchema = new mongoose.Schema({
   title: {type:String, defaul:''},
   text: {type:String, default:''},
   type: {type:String, default:''},
-  approved: {type:Boolean, default:'yes'},
+  approved: {type:String, default:''},
   timestamp: {type:Date, default:Date.now}
 })
 

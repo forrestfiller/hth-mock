@@ -4,7 +4,9 @@ var Entry = require('../models/Entry')
 
 
 router.get('/:resource', function(req, res, next) {
+	
 	console.log('api route')
+	
 	if (error){
 		res.json({
 			confirmation:'fail',
