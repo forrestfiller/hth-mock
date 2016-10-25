@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Create Entry</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel='stylesheet' href='/stylesheets/style.css' />
     </head>
 
@@ -19,11 +20,11 @@
         <div>    
 
           <form action="/createentry" method="post">
-            <input name ="title" type="text" placeholder="Project Title" /><br />
-            <input name ="text" type="text" placeholder="Project Description" /><br />
-            <input name ="type" type="text" placeholder="Project Type" /><br />
+            <input style="margin-bottom:2px" name ="title" type="text" placeholder="Project Title" /><br />
+            <input style="margin-bottom:2px" name ="text" type="text" placeholder="Project Description" /><br />
+            <input style="margin-bottom:2px" name ="type" type="text" placeholder="Project Type" /><br />
             <p>If approved, it's a tool: "true". If tool under development, it's a lab: "false"</p>
-            <input name ="approved" type="text" placeholder="True or False" /><br />
+            <input style="margin-bottom:2px" name ="approved" type="text" placeholder="True or False" /><br />
             <input type="submit" value="Submit" />
 
           </form>          

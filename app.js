@@ -11,10 +11,10 @@ var api = require('./routes/api')
 
 
 var dbUrl = process.env.MONGODB_URI || 'mongodb://localhost/hth-mock'
-mongoose.connect(dbUrl, function(err, res){  
+mongoose.connect(dbUrl, function(err, res){
   if (err){
     console.log('DB CONNECTION FAILED: '+err)
-  }  
+  }
   else {
     console.log('DB CONNECTION SUCCESS: '+dbUrl)
   }

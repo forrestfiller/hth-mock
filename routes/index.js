@@ -32,7 +32,7 @@ router.get('/:page', function(req, res, next) {
 		return
 	}
 	if (page != 'entry'){
-		res.render(page, null)	
+		res.render(page, null)
 		return
 	}
 
@@ -45,11 +45,11 @@ router.get('/:page', function(req, res, next) {
 			res.json(entry)
 		}
 		else {
-			res.render(page, entry)			
+			res.render(page, entry)
 		}
 
 	})
-	
+
 })
 
 router.post('/:page', function(req, res, next) {
