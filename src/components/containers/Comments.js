@@ -2,10 +2,21 @@ import React, { Component } from 'react'
 import Comment from '../presentation/Comment'
 
 class Comments extends Component {
-	render(){
+
+	constructor(){
+		super()
+		this.state = {
+			comment: {
+				username:'',
+				body:'',
+				timestamp:''
+			}
+		}
+	}
+
 		return(
 			<div>
-				<Comment />
+				<Comment {comment} />
 			</div>
 		)
 	}
