@@ -1,5 +1,7 @@
 var EntryController = require('./EntryController')
+var CommentController = require('./CommentController')
 
 module.exports = {
-	entry: EntryController
+	entry: EntryController,
+	comment: CommentController
 }

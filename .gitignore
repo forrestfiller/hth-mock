@@ -1,1 +1,3 @@
 /public/theme/
+.env
+/node_modules
