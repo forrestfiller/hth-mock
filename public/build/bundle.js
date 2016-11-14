@@ -23612,9 +23612,6 @@
 			key: 'render',
 			value: function render() {
 				var entryStyle = _styles2.default.entry;
-				//const zipCode = this.props.currentZone.zipCodes[0]
-				// better way to do this is to iterate through the Array
-				// and turn it into a comma separated string here.
 	
 				return _react2.default.createElement(
 					'div',
@@ -23625,19 +23622,19 @@
 						_react2.default.createElement(
 							'a',
 							{ style: entryStyle.title, href: '#' },
-							this.props.currententry.title
+							this.props.currentEntry.title
 						)
 					),
 					_react2.default.createElement(
 						'span',
 						{ className: 'detail' },
-						this.props.currententry.text
+						this.props.currentEntry.text
 					),
 					_react2.default.createElement('br', null),
 					_react2.default.createElement(
 						'span',
 						{ className: 'detail' },
-						this.props.currententry.type,
+						this.props.currentEntry.type,
 						' project type'
 					)
 				);
